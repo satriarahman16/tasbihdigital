@@ -79,9 +79,13 @@ btnAddAlhamdulillah.addEventListener("click", function () {
       allahhuakbar.innerHTML = countAllahhuakbarValue;
     }
     if (countAllahhuakbarValue === 33) {
-      return alert(
-        "Allahhuakbar complete, please complete SubhanAllah and Alhamdulillah"
-      );
+      return Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Sudah 33 Kali :)",
+        showConfirmButton: false,
+        timer: 2500
+      });
     }
   });
   btnSubstractAllahhuakbarreset.addEventListener("click", function () {
